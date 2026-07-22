@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-line{
+            font-weight: bold;
+        }
+        p::first-letter{
+            font-size: larger;
+            color: purple;
+        }
+        blockquote::before{
+            content: "“";
+            font-size: 30px;
+            color: purple;
+            font-weight: bold;
+        }
+        .box{
+            border: 2px solid purple;
+            margin: auto;
+            padding: 20px;
+            width: 50%;
+        }
+        h1{
+            text-align: center;
+        }
+        a:link{
+            text-decoration: none;
+            color: red;
+        }
+        a:visited{
+            color: purple;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: green;
+        }
+        h4+h4{
+            color: purple;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+    <h1 >My First Blog</h1>
+    <h3>Evaniya Anna Suvi</h3>
+    <p>Learning HTML and CSS is one of the most important steps for anyone who wants to become a web developer. HTML, which stands for HyperText Markup Language, is used to create the structure of a webpage by organizing elements such as headings, paragraphs, images, buttons, links, and forms. CSS, or Cascading Style Sheets, is responsible for improving the appearance of these elements by adding colors, fonts, spacing, borders, animations, and responsive layouts. Together, HTML and CSS help developers build attractive, organized, and user-friendly websites.
+    </p>
+    <blockquote>The best way to learn to code is by building projects and never giving up.</blockquote>
+    <a href="#">read more</a>
+    <h4>hobbies</h4>
+    <h4>interest</h4>
+    </div>
+</body>
+</html>

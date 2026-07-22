@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bxstye{
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+
+        }
+        .box{
+            width: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            margin: auto;
+        }
+        .box img{
+            width: 100%;
+            height: auto;
+        }
+        a[href^="https"] {
+        color: red;
+        font-weight: bold;
+        }
+        img[src$=".jpg"] {
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        }
+        @media only screen and (max-width:600px){
+
+            .bxstye{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box{
+                width: 90%;
+            }
+
+            .box img{
+                width: 100%;
+                height: auto;
+            }
+
+            body{
+                font-size: 14px;
+            }
+        }
+        @media only screen and (orientation: portrait) {
+            .bxstye{
+                background-color: rgb(243, 243, 128);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>featured blog section</h2>
+    <div class="bxstye">
+    <div class="box">
+    <h3>Top Travel Destinations</h3>
+    <img src="travel2.jpg" alt="" ><br>
+    <a href="https://www.makemytrip.com/">read more</a>
+    </div>
+    <div class="box">
+    <h3>Healthy Eating Tips</h3>
+    <img src="food.avif" alt=""><br>
+    <a href="//www.healthline.com/nutrition/50-super-healthy-foods">read more</a>
+    </div>
+    <div class="box">
+    <h3>Photography for Beginners</h3>
+    <img src="photography.jpg" alt=""><br>
+    <a href="https://photographylife.com/what-is-photography">read more</a>
+    </div>
+    </div>
+</body>
+</html>
