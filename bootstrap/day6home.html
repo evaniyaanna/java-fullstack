@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h4 class="display-4 text-center text-white bg-info">Bakery Feedback Form</h4>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="enter name" name="name">
+        </div>  
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="comment">feedback:</label>
+            <textarea class="form-control" rows="3" id="comment" placeholder="enter your feedback"></textarea>
+        </div>  
+         <div class="form-group">
+            <label><b>Contact Method</b></label>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="contact" id="emailContact">
+                <label class="form-check-label" for="emailContact">
+                    Email
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="contact" id="phoneContact">
+                <label class="form-check-label" for="phoneContact">
+                    Phone
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label><b>satisfaction level</b></label>
+            <label>(1-10)</label>
+            <input type="range" class="form-control-range" name="range">
+        </div>
+        <div class ="dropdown">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">type of order</button>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Cakes</a>
+            <a class="dropdown-item" href="#">Cookies</a>
+            <a class="dropdown-item" href="#">Pastries</a>
+            </div>
+        </div>   
+        <div class="text-center mt-5">
+            <button type="submit" class="btn btn-info">Submit</button>
+        </div>      
+    </div>
+</body>
+</html>

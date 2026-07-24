@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+    <h3 class="display-3 text-center">Product Feature Page</h3>
+    <div class="card-deck mt-3">
+        <div class="card bg-info text-white">
+            <div class="card-body text-center">
+                <h3>Smart Watch</h3>
+                <img src="https://m.media-amazon.com/images/I/71XA0QCW5lL._AC_UF1000,1000_QL80_.jpg" alt="" height="300px" weight="300px">
+                <p class="card-text mt-3">A stylish smartwatch with fitness tracking, heart rate monitoring, sleep analysis, and smartphone notifications.</p>
+                <a class="text-warning " "#">read more</a>
+                <div class ="dropdown mt-4">
+                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">more options</button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Add to Wishlist</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">compare</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">report</a>                                                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card bg-success">
+            <div class="card-body text-center">
+                <h3>Wireless Headphones</h3>
+                <img src="https://assets.ajio.com/medias/sys_master/root/20240703/51Q1/6685b5d06f60443f314a090d/-473Wx593H-4938418030-multi-MODEL.jpg" alt="" height="300px" weight="300px">
+                <p class="card-text mt-3">Enjoy crystal-clear audio with wireless Bluetooth connectivity, active noise cancellation, and up to 30 hours of battery life.</p>
+                <a class="text-danger " "#">read more</a>
+                <div class ="dropdown mt-4">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">more options</button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Add to Wishlist</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">compare</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">report</a>                                                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card bg-danger text-white">
+            <div class="card-body text-center">
+                <h3>UltraBook Laptop</h3>
+                <img src="https://5.imimg.com/data5/ECOM/Default/2023/11/359526150/KL/VP/PU/47699750/h004107b643734fbf94f74bb79ffebe74l-eeb5ad4b-ad82-4ac9-b2a1-6b4c11e6e7be-500x500.webp" alt="" height="300px" weight="300px">
+                <p class="card-text mt-3">A lightweight, high-performance laptop featuring a fast processor, Full HD display, SSD storage, and long-lasting battery life for work and entertainment.</p>
+                <a class="text-success " "#">read more</a>
+                <div class ="dropdown mt-4">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">more options</button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Add to Wishlist</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">compare</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">report</a>                                                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <h3 class="text-center mt-5 mb-3">Product FAQs</h3>
+
+    <div id="accordion">
+
+        <div class="card">
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#faq1">
+                    What is the warranty period?
+                </a>
+            </div>
+
+            <div id="faq1" class="collapse show" data-parent="#accordion">
+                <div class="card-body">
+                    All products come with a 1-year manufacturer warranty.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#faq2">
+                    Can I return a product?
+                </a>
+            </div>
+
+            <div id="faq2" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                    Yes. Products can be returned within 30 days of purchase.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#faq3">
+                    Is free shipping available?
+                </a>
+            </div>
+
+            <div id="faq3" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                    Yes. Free shipping is available on eligible orders.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
