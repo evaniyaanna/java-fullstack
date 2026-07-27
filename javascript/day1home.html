@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let riceprice=20;
+        let sugarprice=30;
+        let wheatprice=40;
+        let ricequa=2;
+        let sugarqua=3;
+        let wheatqua=4
+        let ricecost=(riceprice*ricequa)
+        let sugarcost=(sugarprice*sugarqua)
+        let wheatcost=(wheatprice*wheatqua)
+        console.log("cost of rice="+ricecost)
+        console.log("cost of sugar="+sugarcost)
+        console.log("cost of wheat="+wheatcost)
+        let total=(ricecost+sugarcost+wheatcost)
+        document.write("total cost="+total+"<br>")
+        console.log("total cost="+total)
+        ricequa=3;
+        ricecost=(riceprice*ricequa)
+        console.log("recalculated cost of rice="+ricecost)
+        total=(ricecost+sugarcost+wheatcost)
+        document.write("recalculated  cost="+total+"<br>")
+        console.log("recalculated  cost="+total)
+    </script>
+</body>
+</html>
