@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        var contact1={
+            name:"ardra",
+            phone: "7654876543",
+            email:"ardra@gmail.com",
+            getInfo: function() {
+                return "Name: " + this.name +
+               "Phone: " + this.phone +
+               "Email: " + this.email;
+    
+            
+            }
+        };
+        var contact2={
+            name:"sruthi",
+            phone: "7636457843",
+            email:"sruthi@gmail.com",
+            getInfo: function() {
+                return "Name: " + this.name +
+               "Phone: " + this.phone +
+               "Email: " + this.email;
+    }
+            
+        };
+         function printcontactinfo(bookObj){
+            document.write(bookObj.getInfo()+"<br>")
+            console.log(bookObj.getInfo())
+        }
+        printcontactinfo(contact1)
+        printcontactinfo(contact2)
+
+
+    </script>
+</body>
+</html>
