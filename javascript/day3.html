@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var feedback = "   I loved the FOOD and the service!   ";
+        let feedback1=feedback.trim()
+        document.write("after trim:"+" "+feedback1+"<br>")
+        feedback1=feedback1.toLowerCase()
+        document.write("after converting to lowercase:"+" "+feedback1+"<br>")
+        feedback1=feedback1.replace("food","ambience")
+        document.write("after replacing:"+" "+feedback1+"<br>")
+        document.write("position of service:"+" "+feedback1.indexOf("service")+"<br>")
+        feedback1=feedback1.split(" ")
+        document.write("array:"+feedback1)
+    </script>
+</body>
+</html> 
