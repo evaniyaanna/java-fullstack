@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("list of students")
+        let student = [
+            {name: "John", score: 75},
+            {name: "Alice", score: 55},
+            {name: "Bob", score: 90},
+            {name: "Emma", score: 65},
+            {name: "David", score: 45}
+        ];
+        student.forEach(myfunction)
+        function myfunction(student){
+            document.write(student.name+"-"+student.score+"<br>")
+        }
+        document.write("<br><br>")
+        
+        document.write("students with score>60"+"<br>")
+        let score = student.filter(maxscore);
+
+            score.forEach(function(student) {
+            document.write(student.name  + "<br>");
+        });
+
+        function maxscore(student) {
+            return student.score > 60;
+        }    
+        document.write("<br><br>")
+        document.write("sum of scores:"+"<br>")
+        let sum=student.reduce(totalsum,0)
+        document.write(sum)
+        function totalsum(total,value){
+            return total+value.score;
+        }
+        document.write("<br><br>")
+        document.write("all students passed?"+"<br>")
+        var pass=student.every(mypass)
+        document.write(pass)
+        function mypass(value){
+            return value.score>35
+        }
+        document.write("<br><br>")
+        document.write("any student score > 90?"+"<br>")
+        var pass2=student.some(mypass2)
+        document.write(pass2)
+        function mypass2(value){
+            return value.score>90
+        }
+        document.write("<br><br>")
+        document.write("sorted list"+"<br>")
+        
+            student.sort(function(a, b) {
+            return b.score - a.score;
+            });
+            student.forEach(function(student) {
+            document.write(student.name + " - " + student.score + "<br>");
+            });         
+    </script>
+</body>
+</html>

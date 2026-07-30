@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product = ["apple","orange","mango","banana"];
+        let price = [30,80,70,20];
+
+        let productlist = [];
+
+        for (let i = 0; i < product.length; i++) {
+            productlist.push("Product: " + product[i] + " - Price: " + price[i]);
+        }
+
+        for (let i = 0; i < productlist.length; i++) {
+            document.write(productlist[i] + "<br>");
+        }
+        
+        document.write("product with price>50"+"<br>")
+        price.filter(function(value, index) {
+        if (value > 50) {
+        document.write(product[index] + " - " + value + "<br>");
+        }
+        });
+
+        document.write("Updated List<br>");
+
+        product.push("grapes");
+        price.push(80);
+
+        for (let i = 0; i < product.length; i++) {
+            document.write("Product: " + product[i] + " - Price: " + price[i] + "<br>");
+}
+</script>
+</body>
+</html>
