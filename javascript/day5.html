@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="checkreturn()">return</button>
+    <script>
+        let order={
+            itemName:"book",
+            isDelivered:true,
+            daysSinceDelivery:4
+        }
+        function checkreturn(){
+            document.write(
+                (order.isDelivered && order.daysSinceDelivery<7)
+            ?"Eligible for Return":"Return Period Expired");
+            document.write("<br>")
+            document.write("ItemName exists:"+("itemName"in order))
+            delete order.daysSinceDelivery
+            console.log("daysSinceDelivery exists:"+("daysSinceDelivery"in order))
+            console.log(order)
+        }
+
+
+    </script>
+</body>
+</html>
