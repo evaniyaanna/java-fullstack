@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>grocery store calculator</h1>
+    <script>
+
+        let count=0;
+        while(count<5)
+        {
+            count++;
+            let code=parseInt(prompt("enter the product code"));
+            let quantity=parseInt(prompt("enter the quantity"));
+            let product;
+            let price;
+        switch(code){
+            case 1:
+            product="apple";
+            price=30;
+            break;
+
+            case 2:
+            product="banana";
+            price=10;
+            break;
+
+            case 3:
+            product="mango";
+            price=50;
+            break;
+
+            default:
+                console.log("Invalid product code<br><br>");
+                continue;
+            }
+        
+        
+        let total=price*quantity;
+            document.write("Product: " + product + "<br>");
+            document.write("Price: ₹" + price + "<br>");
+            document.write("Quantity: " + quantity + "<br>");
+            document.write("Total: ₹" + total + "<br>"); 
+            if(total>100){
+                document.write("high purchase<br><br>");
+            }
+            else{
+                document.write("normal purchase<br><br>");
+            }
+            
+    }   
+        </script>
+</body>
+</html>
