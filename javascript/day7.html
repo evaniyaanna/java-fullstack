@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getBirthdayDetails(friend)"> friend details</button>
+    <p id="demo"></p>
+    <script>
+        let friend={
+            name:"John",
+            birthDate:"2006-10-03"
+        }
+        function getBirthdayDetails(friend){
+            let birth=new Date(friend.birthDate)
+            let year=birth.getFullYear();
+            let date=birth.getDate();
+
+            let month=["january","february","march","april","may","june","july","august","september","october","november","december"]
+            let mon=month[birth.getMonth()];
+            let today=new Date();
+            let age=today.getFullYear()-year;
+            if(today.getMonth()<birth.getMonth()||(today.getMonth()<birth.getMonth() && today.getDate()<birth.getDate())){
+                age--;
+            }
+            document.getElementById("demo").innerHTML=friend.name+" "+"was born on"+" "+date+" "+mon+" "+year+","+"and he is"+" "+age+" "+" years old"
+        }
+
+    </script>
+</body>
+</html>

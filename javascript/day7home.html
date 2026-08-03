@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Event reminder</h3>
+    <label>past date</label>
+    <input type="date" name="date" id="date">
+    <button onclick="eventdetails()">show details</button>
+    <p id="demo"></p>
+    <script>
+        function eventdetails(){
+            let input=document.getElementById("date").value;
+            let event=new Date(input)
+            let year=event.getFullYear();
+            let date=event.getDate();
+            let month=["january","february","march","april","may","june","july","august","september","october","november","december"]
+            let mon=month[event.getMonth()];
+           
+            let today= new Date();
+            let diff=today.getFullYear()-year;
+            if(today.getMonth()<event.getMonth()||(today.getMonth()<event.getMonth() && today.getDate()<event.getDate())){
+                diff--;
+            }
+            if(diff>=1){
+                message="It has been more than a year since that date";
+            }
+            else{
+                message="It has been less than a year since that date"
+            }
+             document.getElementById("demo").innerHTML="year="+year+"<br>"+"date="+date+"<br>"+"month="+mon+"<br>"+"years passed since past year="+diff+"<br>"+message
+        }
+    </script>
+</body>
+</html>
