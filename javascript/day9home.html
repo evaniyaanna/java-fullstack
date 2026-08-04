@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let comment = "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.";
+
+
+        let cleanedComment = comment.replace(/\b(bad|ugly|stupid)\b/gi, "***");
+
+        let numbers = comment.match(/\d+/g);
+        let numberCount = numbers ? numbers.length : 0;
+
+        let capitals = comment.match(/\b[A-Z][a-zA-Z]*\b/g);
+        let capitalCount = capitals ? capitals.length : 0;
+
+        console.log("Cleaned Comment:");
+        console.log(cleanedComment);
+        console.log("Number Count:", numberCount);
+        console.log("Capitalized Word Count:", capitalCount);
+    </script>
+</body>
+</html>

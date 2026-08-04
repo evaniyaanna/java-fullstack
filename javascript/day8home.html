@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+
+while (count < 5) {
+    let guess = parseInt(prompt("Enter a number between 1 and 5:"));
+
+ 
+    if (guess < 1 || guess > 5) {
+        console.log("Invalid input");
+        continue; // Skip this attempt
+    }
+
+    count++; 
+
+   
+    switch (guess) {
+        case 1:
+            console.log("One");
+            break;
+        case 2:
+            console.log("Two");
+            break;
+        case 3:
+            console.log("Three");
+            break;
+        case 4:
+            console.log("Four");
+            break;
+        case 5:
+            console.log("Five");
+            break;
+    }
+
+ 
+    if (guess === 3) {
+        console.log("You guessed it right!");
+        break;
+    } else {
+        console.log("Wrong guess. Try again.");
+    }
+}
+
+
+if (count === 5) {
+    console.log("Game over");
+}
+    </script>
+</body>
+</html>
