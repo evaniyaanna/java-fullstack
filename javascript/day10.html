@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">user information</h1>
+    <script>
+        let person=`{
+            "name":"evaniya",
+            "email":"evaniyaaa@gmail.com",
+            "message":"bye"
+        }`;
+        try{
+            let user=JSON.parse(person);
+            let message2= () => {
+                console.log("message received from"+" "+user.name )
+            }
+             console.log(message2())
+        }
+        catch(error){
+            console.log("error:"+error.message)
+        }
+    </script>
+</body>
+</html>
