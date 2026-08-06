@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 align="center">User Input</h1>
+
+<form id="myform" onsubmit="display(event)">
+    <label>enter text</label>
+    <input type="text" id="textbox">
+    <button type="submit">Submit</button>
+</form>
+
+<p id="demo1"></p>
+
+<script>
+function display(event) {
+    event.preventDefault();
+
+    let text = document.getElementById("textbox").value;
+    let para = document.getElementById("demo1");
+
+    para.innerHTML = text;
+    para.style.color = "blue";
+}
+
+document.getElementById("demo1").onmouseover = function() {
+    this.style.color = "green";
+}
+
+document.getElementById("demo1").onmouseout = function() {
+    this.style.color = "blue";
+}
+</script>
+
+</body>
+</html>
