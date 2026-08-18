@@ -18,6 +18,6 @@ public class day4home {
             System.out.println("Welcome Guest. View-only access.");
         }
         else
-            System.out.println("nvalid credentials or role");
+            System.out.println("invalid credentials or role");
     }
 }
