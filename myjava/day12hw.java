@@ -4,7 +4,7 @@ import java.io.FileWriter;
 public class day12hw {
     public static void main(String[] args){
         File file=new File("log.txt");
-        String data="Book order placed at [your preferred time]";
+        String data="Book order placed at 12:00 PM";
         char[] array=new char[data.length()];
         try{
             boolean value=file.createNewFile();
