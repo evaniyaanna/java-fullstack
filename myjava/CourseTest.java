@@ -31,20 +31,11 @@ class course{
 
 public class CourseTest {
     public static void main(String[] args) {
-
-        
         course c1 = new course("Java Programming", 8, 30);
-
         course c2 = new course("Python Programming", 6, 25);
-
-       
         c1.displayDetails();
         c2.displayDetails();
-
-        
         System.out.println("Total Students Enrolled: " + course.total);
-
-       
         course.Platform.displayPlatformMessage();
     }
     
