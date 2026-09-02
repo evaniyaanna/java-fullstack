@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": [
+        "myjava",
+        "myapp1/src/main/java/com/example/myapp1"
+    ]
+}

@@ -1,0 +1,21 @@
+body{
+	background-color:lightgreen;
+}
+h1{
+	font-size: large;
+	font-weight: bold;
+	color:darkgray;
+}
+.message-box{
+	font-family: "Poppins";
+	margin:2px;
+	padding:2px;
+	border:1px solid black;
+	border-radius:12px;
+	box-shadow:0px 10px 5px gray;
+}
+
+.message-box:hover {
+  background-color:blue;
+  box-shadow: 0 6px 16px rgb(255, 255, 0);
+}
