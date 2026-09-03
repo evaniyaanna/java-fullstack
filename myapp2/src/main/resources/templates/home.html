@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Website</title>
+</head>
+
+<body>
+
+    <!-- Display heading HTML -->
+    <div th:utext="${headingMessage}"></div>
+
+    <!-- Display welcome message -->
+    <p th:text="${welcomeMessage}"></p>
+
+    <!-- Check login status -->
+    <div th:if="${isLoggedIn}">
+        <p>Welcome back, student!</p>
+    </div>
+
+    <div th:unless="${isLoggedIn}">
+        <p>Please log in to access the lessons</p>
+    </div>
+
+</body>
+</html>

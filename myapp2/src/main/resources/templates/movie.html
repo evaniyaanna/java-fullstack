@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Website</title>
+</head>
+
+<body>
+
+    <h1 th:text="${movieTitle}"></h1>
+
+    <p>Batman faces a dangerous criminal who creates chaos in Gotham City.</p>
+
+    <div th:if="${isLoggedIn}">
+        <p th:text="${movieDescription}"></p>
+    </div>
+
+    <div th:unless="${isLoggedIn}">
+        <p>Please log in to read the full movie description.</p>
+    </div>
+
+</body>
+
+</html>
