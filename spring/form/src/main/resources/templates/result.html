@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Result</title>
+</head>
+
+<body>
+
+<h1>Welcome <span th:text="${username}"></span>,</h1>
+
+<h2>Full Form Data Received:</h2>
+
+<div th:each="entry : ${formData}">
+    <p>
+        <span th:text="${entry.key}"></span> :
+        <span th:text="${entry.value}"></span>
+    </p>
+</div>
+
+</body>
+
+</html>
