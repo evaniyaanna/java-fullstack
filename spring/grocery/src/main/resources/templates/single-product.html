@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Single Product</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .product {
+            font-size: 18px;
+            line-height: 2;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Product Details</h1>
+
+    <div class="product">
+
+        <p>
+            <span class="label">ID:</span>
+            <span th:text="${product.id}"></span>
+        </p>
+
+        <p>
+            <span class="label">Name:</span>
+            <span th:text="${product.name}"></span>
+        </p>
+
+        <p>
+            <span class="label">Price:</span>
+            ₹<span th:text="${product.price}"></span>
+        </p>
+
+    </div>
+
+    <a href="/product-list">View All Products</a>
+
+</div>
+
+</body>
+</html>
