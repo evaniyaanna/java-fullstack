@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Product Creation</title>
+</head>
+
+<body>
+
+    <h2 th:if="${message}" th:text="${message}"></h2>
+
+    <br>
+
+    <form th:action="@{/save_product}" method="post">
+
+        <div>
+            <label>
+                Name :
+                <input type="text" name="name" required />
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Description :
+                <input type="text" name="description" required />
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Price :
+                <input type="number"
+                       name="price"
+                       step="0.01"
+                       required />
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+
+    </form>
+
+    <br>
+
+    <a href="/products">View All Products</a>
+
+</body>
+
+</html>

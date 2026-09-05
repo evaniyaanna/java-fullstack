@@ -1,17 +1,29 @@
-package com.example.myapp2.Models;
+package com.example.shop.Models;
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-@Entity 
-public class ProductModel {
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "product")
+public class Product {
+
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    public Integer id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
     private String name;
+
     private String description;
-    private Float price;
-	
+
+    private Double price;
+
+    public Integer getId() {
+        return id;
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }
@@ -31,10 +43,12 @@ public class ProductModel {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Float getPrice() {
+
+    public Double getPrice() {
         return price;
-    }	
-    public void setPrice(Float price) {
+    }
+
+    public void setPrice(Double price) {
         this.price = price;
     }
 }

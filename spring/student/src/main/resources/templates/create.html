@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Add Student</title>
+</head>
+
+<body>
+
+<h1>Add New Student</h1>
+
+<p th:text="${message}"></p>
+
+<form action="#" th:action="@{/create}" method="post">
+
+    <label>Name:</label>
+    <input type="text" name="name" required />
+    <br><br>
+
+    <label>Class:</label>
+    <input type="text" name="studentClass" required />
+    <br><br>
+
+    <label>Age:</label>
+    <input type="number" name="age" required />
+    <br><br>
+
+    <input type="submit" value="Add Student" />
+
+</form>
+
+<br>
+
+<a href="/all">View All Students</a>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Book Creation</title>
+</head>
+
+<body>
+
+    <h2 th:if="${message}" th:text="${message}"></h2>
+
+    <br>
+
+    <form th:action="@{/save_book}" method="post">
+
+        <div>
+            <label>
+                Title :
+                <input type="text" name="title" required />
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Author :
+                <input type="text" name="author" required />
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label>
+                Price :
+                <input type="number"
+                       name="price"
+                       step="0.01"
+                       required />
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+
+    </form>
+
+    <br>
+
+    <a href="/books">View All Books</a>
+
+</body>
+
+</html>
