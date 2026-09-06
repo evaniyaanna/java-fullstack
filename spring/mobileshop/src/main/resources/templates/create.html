@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Add Phone</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            text-align: center;
+            color: green;
+            margin-bottom: 15px;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Add New Phone</h1>
+
+    <p class="message"
+       th:text="${message}">
+    </p>
+
+    <form action="#"
+          th:action="@{/create}"
+          method="post">
+
+        <label>
+            Phone Name:
+        </label>
+
+        <input type="text"
+               name="name"
+               placeholder="Enter phone name"
+               required>
+
+
+        <label>
+            Description:
+        </label>
+
+        <textarea name="description"
+                  placeholder="Enter phone description"
+                  required></textarea>
+
+
+        <label>
+            Price:
+        </label>
+
+        <input type="text"
+               name="price"
+               placeholder="Enter phone price"
+               required>
+
+
+        <input type="submit"
+               value="Add Phone">
+
+    </form>
+
+    <div class="links">
+
+        <a href="/all">
+            View All Phones
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

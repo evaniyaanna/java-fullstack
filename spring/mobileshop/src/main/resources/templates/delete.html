@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Delete Phone</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            width: 450px;
+            margin: 100px auto;
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            color: #dc3545;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .delete-button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .cancel {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Delete Phone</h1>
+
+    <p>
+        Are you sure you want to delete
+        <strong th:text="${phoneDetails.name}"></strong>?
+    </p>
+
+    <form action="#"
+          th:action="@{/delete/{id}(id=${phoneDetails.id})}"
+          method="post">
+
+        <input type="submit"
+               value="Delete"
+               class="delete-button">
+
+        <a href="/all"
+           class="cancel">
+            Cancel
+        </a>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
