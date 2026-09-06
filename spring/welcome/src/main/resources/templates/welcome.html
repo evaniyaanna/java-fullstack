@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome</title>
+
+
+    <style>
+
+        body {
+
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            background: #f4f6f8;
+        }
+
+
+        .navbar {
+
+            background: #007bff;
+
+            color: white;
+
+            padding: 18px 40px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .navbar h2 {
+
+            margin: 0;
+        }
+
+
+        .logout-button {
+
+            background: white;
+
+            color: #007bff;
+
+            padding: 9px 18px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            font-size: 14px;
+        }
+
+
+        .dashboard {
+
+            text-align: center;
+
+            margin-top: 100px;
+        }
+
+
+        .dashboard h1 {
+
+            color: #333;
+        }
+
+
+        .dashboard p {
+
+            color: #666;
+
+            font-size: 18px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="navbar">
+
+    <h2>
+        Welcome Portal
+    </h2>
+
+
+    <form
+        action="/logout"
+        method="post">
+
+        <button
+            type="submit"
+            class="logout-button">
+
+            Logout
+
+        </button>
+
+    </form>
+
+</div>
+
+
+<div class="dashboard">
+
+    <h1>
+
+        Welcome,
+        <span th:text="${username}">
+        </span>!
+
+    </h1>
+
+
+    <p>
+
+        You have successfully logged in.
+
+    </p>
+
+
+    <p>
+
+        Welcome to your dashboard.
+
+    </p>
+
+</div>
+
+
+</body>
+
+</html>

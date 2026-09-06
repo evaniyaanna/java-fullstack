@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Mobile Creation</title>
+</head>
+
+<body>
+
+<h2 th:if="${message}" th:text="${message}"></h2>
+
+<form th:action="@{/save_mobile}" method="post">
+
+    <div>
+        <label>
+            Phone Name :
+            <input type="text" name="name" required>
+        </label>
+    </div>
+
+    <br>
+
+    <div>
+        <label>
+            Brand :
+            <input type="text" name="brand" required>
+        </label>
+    </div>
+
+    <br>
+
+    <div>
+        <label>
+            Price :
+            <input type="number" name="price" required>
+        </label>
+    </div>
+
+    <br>
+
+    <div>
+        <label>
+            Type :
+            <select name="type" required>
+                <option value="Android">Android</option>
+                <option value="iPhone">iPhone</option>
+            </select>
+        </label>
+    </div>
+
+    <br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<br>
+
+<a th:href="@{/mobiles}">
+    View Mobile Inventory
+</a>
+
+</body>
+</html>

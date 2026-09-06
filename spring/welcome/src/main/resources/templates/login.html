@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background: #f4f6f8;
+        }
+
+
+        .container {
+
+            width: 400px;
+
+            margin: 70px auto;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.1);
+        }
+
+
+        h2 {
+
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+
+        .form-group {
+
+            margin-bottom: 18px;
+        }
+
+
+        label {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            font-weight: bold;
+        }
+
+
+        input {
+
+            width: 100%;
+
+            padding: 11px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+
+            box-sizing: border-box;
+        }
+
+
+        button {
+
+            width: 100%;
+
+            padding: 12px;
+
+            background: #007bff;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+
+        .message {
+
+            background: #d4edda;
+
+            color: #155724;
+
+            padding: 10px;
+
+            margin-bottom: 15px;
+
+            border-radius: 5px;
+        }
+
+
+        .error {
+
+            background: #f8d7da;
+
+            color: #721c24;
+
+            padding: 10px;
+
+            margin-bottom: 15px;
+
+            border-radius: 5px;
+        }
+
+
+        .register-link {
+
+            text-align: center;
+
+            margin-top: 18px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+    <h2>
+        Login
+    </h2>
+
+
+    <!-- Registration success -->
+
+    <div class="message"
+         th:if="${param.registered}">
+
+        Registration successful.
+        Please login.
+
+    </div>
+
+
+    <!-- Logout message -->
+
+    <div class="message"
+         th:if="${param.logout}">
+
+        You have been logged out successfully.
+
+    </div>
+
+
+    <!-- Login error -->
+
+    <div class="error"
+         th:if="${param.error}">
+
+        Invalid username or password.
+
+    </div>
+
+
+    <form
+        action="/login"
+        method="post">
+
+
+        <div class="form-group">
+
+            <label>
+                Username
+            </label>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Enter username"
+                required>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Password
+            </label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                required>
+
+        </div>
+
+
+        <button type="submit">
+            Login
+        </button>
+
+
+    </form>
+
+
+    <div class="register-link">
+
+        Don't have an account?
+
+        <a href="/registration">
+            Register
+        </a>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

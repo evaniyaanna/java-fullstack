@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Mobile Inventory</title>
+</head>
+
+<body>
+
+<h1>Mobile Phone Inventory</h1>
+
+
+<!-- ALL PHONES -->
+
+<h2>All Phone Names and Prices</h2>
+
+<table border="1">
+
+    <tr>
+        <th>Phone Name</th>
+        <th>Price</th>
+    </tr>
+
+    <tr th:each="phone : ${allPhones}">
+
+        <td th:text="${phone[0]}"></td>
+
+        <td th:text="${phone[1]}"></td>
+
+    </tr>
+
+</table>
+
+
+<br><br>
+
+
+<!-- PHONES BELOW 20000 -->
+
+<h2>Phones Below ₹20,000</h2>
+
+<table border="1">
+
+    <tr>
+        <th>Phone Name</th>
+        <th>Brand</th>
+        <th>Price</th>
+        <th>Type</th>
+    </tr>
+
+    <tr th:each="phone : ${cheapPhones}">
+
+        <td th:text="${phone.name}"></td>
+
+        <td th:text="${phone.brand}"></td>
+
+        <td th:text="${phone.price}"></td>
+
+        <td th:text="${phone.type}"></td>
+
+    </tr>
+
+</table>
+
+
+<br><br>
+
+
+<!-- GROUP BY TYPE -->
+
+<h2>Total Phones Grouped by Type</h2>
+
+<table border="1">
+
+    <tr>
+        <th>Type</th>
+        <th>Total Phones</th>
+    </tr>
+
+    <tr th:each="phone : ${phoneCount}">
+
+        <td th:text="${phone[0]}"></td>
+
+        <td th:text="${phone[1]}"></td>
+
+    </tr>
+
+</table>
+
+
+<br>
+
+<a th:href="@{/mobile_create}">
+    Add New Mobile
+</a>
+
+</body>
+</html>

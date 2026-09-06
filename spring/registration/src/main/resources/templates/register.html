@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fresher Job Portal - Registration</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+        }
+
+        .container {
+            width: 420px;
+            margin: 60px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #222;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .register-btn:hover {
+            background: #0056b3;
+        }
+
+        .success {
+            padding: 12px;
+            margin-bottom: 20px;
+            background: #d4edda;
+            color: #155724;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .portal-title {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2 class="portal-title">
+        Fresher Job Portal
+    </h2>
+
+    <p class="subtitle">
+        Create your account
+    </p>
+
+    <!-- Success Message -->
+    <div class="success"
+         th:if="${message != null}"
+         th:text="${message}">
+    </div>
+
+    <form th:action="@{/registration}"
+          method="post"
+          th:object="${user}">
+
+        <!-- Full Name -->
+        <div class="form-group">
+
+            <label for="fullname">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="fullname"
+                th:field="*{fullname}"
+                placeholder="Enter your full name"
+                required>
+
+        </div>
+
+        <!-- Mobile Number -->
+        <div class="form-group">
+
+            <label for="mobile">
+                Mobile Number
+            </label>
+
+            <input
+                type="tel"
+                id="mobile"
+                th:field="*{mobile}"
+                placeholder="Enter your mobile number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required>
+
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                th:field="*{email}"
+                placeholder="Enter your email"
+                required>
+
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                th:field="*{password}"
+                placeholder="Enter your password"
+                minlength="6"
+                required>
+
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+
+            <label for="confirmPassword">
+                Confirm Password
+            </label>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm your password"
+                required>
+
+        </div>
+
+        <button
+            type="submit"
+            class="register-btn"
+            onclick="return validatePassword()">
+
+            Register
+
+        </button>
+
+    </form>
+
+</div>
+
+<script>
+
+function validatePassword() {
+
+    let password =
+        document.getElementById("password").value;
+
+    let confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+    if (password !== confirmPassword) {
+
+        alert("Passwords do not match.");
+
+        return false;
+    }
+
+    return true;
+}
+
+</script>
+
+</body>
+
+</html>
