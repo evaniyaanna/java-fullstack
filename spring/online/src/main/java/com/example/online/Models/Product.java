@@ -1,6 +1,5 @@
-package com.example.myapp2.Models;
+package com.example.online.Models;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,22 +9,23 @@ import jakarta.persistence.Id;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(length = 100)
     private String name;
 
-    @Column(length = 255)
     private String description;
 
-    @Column(length = 10)
-    private String expirydate;
-
-    @Column(length = 10)
     private String price;
 
-    // Getters and Setters
+    private String expirydate;
+
+    private String category;
+
+    private Integer stock;
+
+    public Product() {
+    }
 
     public Integer getId() {
         return id;
@@ -51,6 +51,14 @@ public class Product {
         this.description = description;
     }
 
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
     public String getExpirydate() {
         return expirydate;
     }
@@ -59,11 +67,19 @@ public class Product {
         this.expirydate = expirydate;
     }
 
-    public String getPrice() {
-        return price;
+    public String getCategory() {
+        return category;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
     }
 }
