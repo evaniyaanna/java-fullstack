@@ -1,13 +1,9 @@
 import React from "react";
-import Room from "./components/Room";
 
 function App() {
-
   return (
-    <div className="container mt-5">
-
-      <Room />
-
+    <div>
+      <h1>Student Website</h1>
     </div>
   );
 }
